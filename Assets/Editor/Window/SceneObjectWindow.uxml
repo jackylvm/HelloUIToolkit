@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/Editor/Window/SceneObjectWindow.uss?fileID=7433441132597879392&amp;guid=e4452d21c68b08846b1a6f48a6bc4f8d&amp;type=3#SceneObjectWindow" />
+    <ui:VisualElement name="UITop" style="flex-grow: 0; flex-direction: row; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+        <uie:ObjectField label="Object Field" name="TopObjectField" style="flex-grow: 1;" />
+        <ui:Button text="Create" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BtnCreate" style="min-width: auto;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="UIMiddle" style="flex-grow: 1; flex-direction: row; margin-top: 2px; margin-right: 2px; margin-bottom: 2px; margin-left: 2px;">
+        <ui:ListView focusable="true" name="GameObjects" style="width: 200px; border-top-width: 1px; border-right-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px;" />
+        <ui:VisualElement name="ObjectInfo" style="flex-grow: 1; border-top-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-bottom-width: 1px;">
+            <ui:Label tabindex="-1" text="物品信息" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 18px;" />
+            <ui:Foldout text="Property" name="Property" style="background-color: rgb(173, 173, 173); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px;">
+                <ui:TextField picking-mode="Ignore" label="Name" name="FieldGameObjectName" />
+                <ui:Vector3Field label="Position" name="FieldGameObjectPosition" />
+                <ui:IntegerField label="NewProperty" value="42" name="FieldGameObjectProperty" />
+                <ui:TextField picking-mode="Ignore" label="SyncValue" name="FieldSyncValue" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Button text="Refresh" parse-escape-sequences="true" display-tooltip-when-elided="true" name="BtnRefresh" style="justify-content: flex-start; align-items: auto;" />
+</ui:UXML>
